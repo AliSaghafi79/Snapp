@@ -1,0 +1,219 @@
+.MixinsFlex(@p , @q) {
+
+    display: flex;
+    flex-direction: @p;
+    justify-content: @q
+}
+
+.MixinSize(@w , @h , @bgcolor) {
+    width: @w;
+    height: @h;
+    background-color: @bgcolor;
+}
+
+.MixinParagraph(@dir , @cl , @fs , @lh) {
+    direction: @dir ;
+    color: @cl ;
+    font-size: @fs ;
+    line-height: @lh
+}
+
+
+.Advertising {
+
+    .MixinSize(100%, 70rem, #ffff);
+    margin-bottom: 2.5rem;
+
+    .BoxLogoAd {
+
+        .MixinSize(100%, 29rem, #ffff);
+        .MixinsFlex(row, space-around);
+        align-items: center;
+        margin-top: 3rem;
+
+        .BoxPic {
+            .MixinSize(67.125rem, 20rem, transparent);
+            border-radius: 0.5rem;
+            position: relative;
+
+            .BoxNexPre {
+                .MixinSize(67.125rem, 20rem, transparent);
+                .MixinsFlex(row, center);
+                align-items: flex-end;
+                position: absolute;
+
+                .NexPre {
+
+                    .MixinSize(4.2rem, 1.1rem, hsla(0, 0%, 100%, .18));
+                    .MixinsFlex(row, space-around);
+                    align-items: center;
+                    position: absolute;
+                    z-index: 5;
+                    margin-bottom: 0.5rem;
+                    border-radius: 10px;
+
+                    .Circle {
+                        color: hsla(0, 0%, 100%, .4);
+                        font-size: 0.5rem;
+                        cursor: pointer;
+
+                    }
+
+                    .CircleWhite {
+                        color: #ffff
+                    }
+                }
+            }
+
+
+            .AllPic {
+                .MixinSize(67.125rem, 20rem, transparent);
+                display: block;
+                border-radius: 0.5rem;
+                background-size: cover;
+                position: absolute;
+
+
+
+
+
+            }
+
+            .pic1 {
+                background-image: url('../Images/pic1.png');
+                z-index: 4;
+            }
+
+            .pic2 {
+                background-image: url('../Images/pic2.png');
+                z-index: 3;
+            }
+
+            .pic3 {
+                background-image: url('../Images/pic3.png');
+                z-index: 2;
+
+            }
+
+            .pic4 {
+                background-image: url('../Images/pic4.png');
+                z-index: 1;
+
+            }
+
+        }
+
+
+
+
+    }
+
+    .BoxAdvertising {
+        .MixinSize(transparent, 41rem, #ffff);
+        position: relative;
+
+
+        .Niaz {
+            .MixinSize(transparent, 28.125rem, rgb(145, 152, 179));
+            .MixinsFlex(row-reverse, space-between);
+
+            img {
+                .MixinSize(50%, 28.125rem, rgb(145, 152, 179));
+
+            }
+
+            .span1 {
+                .MixinSize(50%, 28.125rem, #ffff);
+                position: relative;
+
+                .span2 {
+
+                    display: block;
+                    .MixinSize(30.70rem, 24rem, #ffff);
+                    position: absolute;
+                    bottom: 0;
+                    right: 7%;
+                    .MixinsFlex(column, auto);
+
+                    .spanP1 {
+                        font-size: 22.12px !important;
+                        margin-top: 24px !important;
+                        margin-bottom: 24px !important;
+                        float: right;
+                        direction: rtl;
+
+                    }
+
+                    .spanP2 {
+                        font-size: 15px !important;
+                        margin-top: 8px !important;
+                        margin-bottom: 8px !important;
+                        font-family: inherit;
+                        vertical-align: baseline;
+                        white-space: pre-wrap;
+                        direction: rtl;
+                        line-height: 1.7;
+
+                    }
+
+
+
+                }
+
+            }
+
+        }
+
+
+        .easy {
+
+            .MixinSize(100%, 20rem, rgba(255, 255, 255 , 0));
+            .MixinsFlex(row, space-around);
+            position: absolute;
+            bottom: 0;
+
+            .easyfast {
+
+                .MixinSize(70rem, 100%, transparent);
+                .MixinsFlex(row-reverse, space-around);
+
+
+
+
+
+                .easybox {
+                    .MixinSize(16rem, 100%, transparent);
+                    .MixinsFlex(column, space-between);
+
+                    .imgEasy {
+                        width: 16rem;
+                        border-radius: 18px !important;
+                        background: #f2f5f8;
+                        align-items: center;
+                        justify-content: center;
+
+                    }
+
+                    .P1Easy {
+                        direction: rtl;
+                        font-weight: bold !important;
+                        font-size: 17.08px !important;
+                        margin-top: 16px !important;
+                        margin-bottom: 16px !important;
+                    }
+
+                    .P2Easy{
+                        font-size: 11.9px !important;
+                        direction: rtl;
+                    }
+
+
+
+                }
+            }
+
+        }
+
+
+    }
+}

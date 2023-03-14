@@ -1,0 +1,211 @@
+@bgCl : background-color;
+
+.MixinsFlex(@p , @q) {
+
+    display: flex;
+    flex-direction: @p;
+    justify-content: @q
+}
+
+.MixinSize(@w , @h , @bgcolor) {
+    width: @w;
+    height: @h;
+    background-color: @bgcolor;
+}
+
+.MixinParagraph(@dir , @cl , @fs , @lh) {
+    direction: @dir ;
+    color: @cl ;
+    font-size: @fs ;
+    line-height: @lh
+}
+
+.Main {
+    .MixinSize(100%, auto, #ffff);
+
+
+    .MainBox {
+
+        .MixinSize(auto, 35rem, #ffff);
+        .MixinsFlex(row-reverse, auto);
+
+        .MainImage {
+            .MixinSize(50%, 100%, #ffff);
+            position: relative;
+            z-index: 0;
+
+
+            img {
+
+                .MixinSize(100%, 29rem, auto);
+                position: absolute;
+                bottom: 0;
+
+
+            }
+
+        }
+
+        .MainLogin {
+            .MixinSize(50%, 100%, #21aa58);
+            position: relative;
+
+            .Login {
+                .MixinSize(75%, 70%, auto);
+                .MixinsFlex(column, space-between);
+                position: absolute;
+                bottom: 7%;
+                left: 5%;
+
+                .paragraph {
+
+                    .p1_login {
+                        .MixinParagraph(rtl, #ffff, 2.25rem, 3.25rem);
+                        font-weight: 700;
+                        margin-top: 0;
+                        margin-bottom: 16px !important;
+                    }
+
+                    .p2_login {
+
+                        .MixinParagraph(rtl, #ffff, 1.26875rem, 1.7);
+                        padding-top: 16px !important;
+                        padding-bottom: 16px !important;
+                        margin: 0;
+
+                    }
+
+
+                }
+
+
+
+                .InputLogin {
+                    .MixinsFlex(row, flex-end);
+                    height: 3rem;
+
+                    .InterInput {
+
+                        width: 16.015625rem;
+                        border-bottom: 1px white solid;
+                        position: relative;
+
+
+                        input {
+                            .MixinSize(14.890625rem, 100%, #21aa58);
+                            float: right;
+                            padding-left: 8px;
+                            padding-right: 8px;
+                            border: none;
+                            direction: rtl;
+                            color: #ffff;
+                            font-size: 0.8rem;
+
+
+                            &:focus {
+
+                                outline: none;
+                            }
+
+                        }
+
+                        .IconInput {
+                            color: #ffff;
+                            font-size: 0.55rem;
+                            position: absolute;
+                            top: 40%;
+                            left: 3%;
+                        }
+                    }
+
+                    .InterBtn {
+                        .MixinSize(25%, auto, #fff);
+                        font-size: 0.9rem !important;
+                        margin-right: 0.9rem !important;
+                        color: #00d16f !important;
+                        font-weight: 900 !important;
+                        border-color: #e5e5e5 !important;
+                        border: none;
+                        padding: 0px 8px;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        position: relative;
+                        max-width: 100%;
+                        transition: all 100ms ease 0s;
+                        font-family: inherit;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        user-select: none;
+                    }
+                }
+
+                .DivLoginBtn {
+
+                    .MixinSize(100%, 3rem, auto);
+
+                    position: relative;
+                    width: 100%;
+                    height: 3rem;
+                    margin-top: 0;
+
+
+                    .LoginBtn {
+
+                        .MixinSize(16.015625rem, 3rem, #21aa58);
+
+                        .MixinParagraph(rtl, rgb(255, 255, 255), 16px, 1);
+
+                        position: absolute;
+                        right: 0;
+                        border: 1px solid rgb(255, 255, 255);
+                        padding: 0px 8px;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        max-width: 100%;
+                        transition: all 100ms ease 0s;
+                        font-family: inherit;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        user-select: none;
+                        font-weight: 900 !important;
+
+                        &:hover {
+                            @{bgCl}: rgba(255, 255, 255, 0.1)
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    .BoxApp {
+        .MixinSize(83.9375rem, 12.05625rem, #ffff);
+
+        .InstallApp {
+
+            .MixinSize(65.9375rem, 12.05625rem, #ffff);
+            .MixinsFlex(row-reverse, space-around);
+            align-items: center;
+            margin: 0 auto;
+
+            .Apps {
+
+                .MixinSize(10rem, 2.96458rem, #ffff);
+                cursor: pointer;
+
+
+                img {
+                    .MixinSize(10rem, 2.96458rem, #ffff);
+
+                }
+
+            }
+
+        }
+    }
+}

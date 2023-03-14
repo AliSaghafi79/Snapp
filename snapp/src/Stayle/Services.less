@@ -1,0 +1,83 @@
+.MixinSize(@w , @h , @bgcolor) {
+    width: @w;
+    height: @h;
+    background-color: @bgcolor;
+}
+
+.MixinsFlex(@p , @q) {
+
+    display: flex;
+    flex-direction: @p;
+    justify-content: @q
+}
+
+.MixinParagraph(@dir, @fs , @lh) {
+    direction: @dir ;
+    font-size: @fs ;
+    line-height: @lh
+}
+
+.Services {
+    .MixinSize(100%, 64.5625rem, #f2f5f8);
+    .MixinsFlex(row, center);
+
+    .ServiceBox {
+        .MixinSize(67.15rem, 62.0625rem, transparent);
+
+
+        .P_Servic {
+            .MixinSize(67.15rem, 8.25rem, transparent);
+
+            p {
+                .MixinParagraph (rtl, 36px, 52px);
+                margin: 0;
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+                font-weight: 700;
+                text-align: center !important;
+
+            }
+
+        }
+
+        .AppServicBox {
+            .MixinsFlex(row-reverse, space-around);
+            flex-wrap: wrap;
+
+
+
+
+            .AppServic {
+                .MixinSize(19.4729375rem, 5.6875rem, #fff);
+                margin: 1rem !important;
+                border-radius: 18px !important;
+                border-color: #e5e5e5 !important;
+
+                img {
+                    float: right;
+                    margin-left: 8px !important;
+                    margin-right: 8px !important;
+                    margin-top: 15px !important;
+
+                }
+
+
+
+                .nameP {
+                    margin-top: 17px !important;
+                    margin-bottom: 4px !important;
+                    text-align: right !important;
+                }
+
+                .subNameP {
+                    text-align: right !important;
+                    font-size: 12px !important;
+                    color: #a3a3a3 !important;
+
+                }
+
+            }
+        }
+    }
+
+}

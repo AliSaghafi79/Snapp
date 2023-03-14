@@ -1,0 +1,58 @@
+.MixinsFlex(@p , @q) {
+
+    display: flex;
+    flex-direction: @p;
+    justify-content: @q
+}
+
+.MixinSize(@w , @h , @bgcolor) {
+    width: @w;
+    height: @h;
+    background-color: @bgcolor;
+}
+
+
+.Footer {
+
+    .MixinSize(100%, 7rem, #ffff);
+    .MixinsFlex(column, center);
+
+    .FooterBox {
+        .MixinSize(89.5%, 1.6rem, transparent);
+        .MixinsFlex(row-reverse, space-between);
+        margin: auto;
+
+        .FooterItem {
+
+            .MixinSize(43rem, 100%, transparent);
+            .MixinsFlex(row-reverse, space-between);
+
+            a {
+                direction: rtl;
+                text-decoration: none;
+                color: #000000;
+                white-space: nowrap;
+                letter-spacing: -.1px;
+                font-size: 95%;
+            }
+
+        }
+
+        .FooterTel {
+
+            .MixinSize(12rem, 100%, transparent);
+            .MixinsFlex(row-reverse, space-between);
+            align-items: center;
+
+
+            .social{
+                .MixinSize(1.6rem, 1.6rem, transparent);
+                cursor: pointer;
+            }
+
+
+        }
+
+
+    }
+}

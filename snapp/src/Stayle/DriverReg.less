@@ -1,0 +1,130 @@
+.MixinsFlex(@p , @q) {
+
+    display: flex;
+    flex-direction: @p;
+    justify-content: @q
+}
+
+.MixinSize(@w , @h , @bgcolor) {
+    width: @w;
+    height: @h;
+    background-color: @bgcolor;
+}
+
+
+.DriverReg {
+
+    .MixinSize(100%, 95rem, #f2f5f8);
+
+    .MixinsFlex(row, space-around);
+
+    .DriverBox {
+
+        .MixinSize(67rem, 90rem, transparent);
+        margin-top: 2.5rem;
+        text-align: center;
+
+        h2 {
+            direction: rtl;
+            font-size: 36px;
+            line-height: 52px;
+            font-weight: 700;
+        }
+
+        .P_Driver {
+            font-weight: 500 !important;
+            font-size: 20.3px !important;
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+            direction: rtl;
+
+        }
+
+        .RegBtn {
+            width: auto;
+            height: 48px !important;
+            cursor: pointer;
+            font-size: 17.08px !important;
+            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+            background-color: rgb(0, 219, 117);
+            font-weight: bold !important;
+            line-height: 1 !important;
+            color: rgb(255, 255, 255);
+            border: medium none;
+            padding: 0px 8px;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+            transition: all 100ms ease 0s;
+            font-family: inherit;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            user-select: none;
+
+
+            &:hover {
+                outline: none;
+                background-color: rgba(0, 219, 117, 0.9);
+
+            }
+
+
+
+        }
+
+        video {
+            .MixinSize(100%, auto, transparent);
+            border-radius: 9px !important;
+            margin-top: 40px !important;
+            margin-bottom: 40px !important;
+
+
+        }
+
+        .AdDriverReg {
+            .MixinSize(100%, 29rem, transparent);
+            .MixinsFlex(row-reverse, space-between);
+            flex-wrap: wrap;
+
+            .AdDrivBox {
+                .MixinSize(49%, 12.5rem, #fff);
+                .MixinsFlex(row-reverse , space-between);
+                border-radius: 18px !important;
+                margin-top: 32px !important;
+                padding-left: 24px !important;
+                padding-right: 24px !important;
+                align-items: center;
+                line-height: 1.7;
+
+                .PDriver {
+                    text-align: center!important;
+                    padding-right: 16px!important;
+                    .MixinsFlex(column , center);
+                    align-items: center;
+                    .MixinSize(22rem , 7.15rem , transparent);
+                    .P1Driver {
+                        font-size: 1rem;
+                        text-align: right !important;
+                        font-weight: 700 !important;
+                        padding-top: 8px !important;
+                        padding-bottom: 8px !important;
+                    }
+
+                    .P2Driver{
+                        text-align: right!important;
+                        font-size: 13px!important;
+                        line-height: 1.7;
+                    }
+                }
+
+
+            }
+        }
+
+
+    }
+}
